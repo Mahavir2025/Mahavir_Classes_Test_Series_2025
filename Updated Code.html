@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentsKiAwaaz Bharuch Test Series 2025-26</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #002b5c;
+      --primary-light: #1a4a7a;
+      --secondary: #ffffff;
+      --accent: #e63946;
+      --accent-light: #ff6b7a;
+      --light: #f4f4f9;
+      --dark: #333;
+      --gray: #6c757d;
+      --success: #28a745;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Premium Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--secondary);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      /* filter: brightness(0) invert(1); */
+    }
+
+    .logo-divider {
+      width: 2px;
+      height: 30px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5), transparent);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .sub-title {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 0.8rem 0;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    nav a:hover {
+      color: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    /* Premium Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(0, 43, 92, 0.9) 0%, rgba(26, 74, 122, 0.85) 100%), 
+                  url('https://i.ibb.co/tpXyY4yv/photo-2025-09-29-18-52-36.jpg') center/cover no-repeat;
+                  
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content { 
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #fff 0%, #ff6b7a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: var(--accent-light);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      color: white;
+      padding: 1.2rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: 0.5s;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(230, 57, 70, 0.5);
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid white;
+      margin-left: 1.5rem;
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 1rem;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.8rem;
+      color: var(--primary);
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 3px;
+    }
+
+    /* Premium Timetable Styles */
+    .timetable-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .test-timetable {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 43, 92, 0.1);
+    }
+
+    .test-timetable::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .test-timetable:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .test-timetable.blur-card {
+      filter: blur(2px);
+      opacity: 0.8;
+    }
+
+    .coming-soon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 10px;
+      z-index: 10;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .test-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(0, 43, 92, 0.1);
+    }
+
+    .test-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .test-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .timetable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .timetable th {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .timetable td {
+      padding: 1.2rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+      font-weight: 500;
+    }
+
+    .timetable tr:nth-child(even) {
+      background-color: rgba(0, 43, 92, 0.02);
+    }
+
+    .timetable tr:hover {
+      background-color: rgba(0, 43, 92, 0.05);
+      transform: scale(1.01);
+      transition: var(--transition);
+    }
+
+    .subject-cell {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .empty-cell {
+      color: var(--gray);
+      font-style: italic;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .benefit-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+      border-top: 4px solid var(--primary);
+    }
+
+    .benefit-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-box i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .benefit-box h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    /* Pricing Section */
+    .pricing-box {
+      text-align: center;
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-box::before {
+      content: 'SPECIAL OFFER';
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--accent);
+      color: white;
+      padding: 5px 30px;
+      transform: rotate(45deg);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .price del {
+      font-size: 1.5rem;
+      color: var(--gray);
+    }
+
+    .price span {
+      color: var(--accent);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .features-list {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .features-list li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .features-list i {
+      color: var(--success);
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 250px;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Results Section */
+    .results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .result-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .result-content {
+      padding: 1.5rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      font-size: 5rem;
+      color: var(--primary-light);
+      opacity: 0.2;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial .author {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 1.5rem;
+      max-height: 500px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+    }
+
+    #contact .section-title h2 {
+      color: white;
+    }
+
+    #contact .section-title h2::after {
+      background: var(--accent-light);
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-item i {
+      font-size: 1.5rem;
+      color: var(--accent-light);
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.9);
+      font-family: inherit;
+    }
+
+    form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .footer-column h3 {
+      color: var(--accent-light);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--accent-light);
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-column a {
+      color: #ccc;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-column a:hover {
+      color: var(--accent-light);
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .header-container {
+        padding: 1rem;
+      }
+      
+      nav {
+        gap: 1.5rem;
+      }
+      
+      .timetable-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero h2 {
+        font-size: 3rem;
+      }
+      
+      .hero-tagline {
+        font-size: 1.8rem;
+      }
+      
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      
+      .logo-container {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+        gap: 0;
+      }
+      
+      nav a {
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      nav.active {
+        display: flex;
+      }
+      
+      .mobile-menu {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+      
+      .hero {
+        padding: 6rem 1rem;
+        min-height: 80vh;
+      }
+      
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      
+      .hero-tagline {
+        font-size: 1.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+      
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+      
+      .btn-secondary {
+        margin-left: 0;
+      }
+      
+      .test-timetable {
+        padding: 2rem 1rem;
+      }
+      
+      .timetable-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .timetable {
+        font-size: 0.9rem;
+      }
+      
+      .timetable th, 
+      .timetable td {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-tagline {
+        font-size: 1.3rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .test-name {
+        font-size: 1.8rem;
+      }
+      
+      .logo img {
+        height: 35px;
+      }
+      
+      .main-title {
+        font-size: 1.2rem;
+      }
+      
+      .test-timetable {
+        padding: 1.5rem;
+      }
+      
+      .timetable {
+        font-size: 0.8rem;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <!-- StudentsKiAwaaz Logo -->
+         <a href="https://imgbb.com/"><img src="https://i.ibb.co/XxTt7dgC/Students-Ki-Awaaz-Logo-20250929-181844-000.png" alt="Students-Ki-Awaaz-Logo-20250929-181844-000" border="0"></a>
+          <div class="logo-divider"></div>
+          <!-- Mahavir Classes Logo -->
+          <a href="https://ibb.co/3x3dvHw"><img src="https://i.ibb.co/MzvSfLb/Mahavir-logo.jpg" alt="Mahavir-logo" border="0"></a>
+        </div>
+        <div class="logo-text">
+          <div class="main-title">Test Series 2025-26</div>
+          <div class="sub-title">For Std. 10 English Med. (CBSE/GSEB) & Gujarati Med.</div>
+        </div>
+      </div>
+      
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <nav>
+        <a href="#about">About</a>
+        <a href="#benefits">Why Join</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#syllabus">Syllabus</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#results">Results</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Premium Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Board Exam Test Series 2025-26</h2>
+      <div class="hero-tagline">लक्ष्य • विश्वास • मंज़िल</div>
+      <p class="hero-subtitle">Real Board Exam Experience for Std. 10 Students</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Register Now</a>
+        <a href="#schedule" class="btn btn-secondary">View Test Schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>About the Test Series</h2>
+      </div>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Organized by <strong>StudentsKiAwaaz Bharuch</strong> in collaboration with <strong>Mahavir Classes</strong>, this test series is designed to give Std. 10 students (English & Gujarati Medium, GSEB/CBSE) a real board exam experience. Students get hall tickets, seating arrangements, supplementary sheets, strict timings, and online results — everything to prepare them with confidence.</p>
+    </div>
+  </section>
+
+  <div class="logo-container">
+        <div class="logo">
+          <!-- StudentsKiAwaaz Logo -->
+         <a href="https://imgbb.com/"><img src="https://i.ibb.co/XxTt7dgC/Students-Ki-Awaaz-Logo-20250929-181844-000.png" alt="Students-Ki-Awaaz-Logo-20250929-181844-000" border="0"></a>
+          <div class="logo-divider"></div>
+          <!-- Mahavir Classes Logo -->
+          <a href="https://ibb.co/3x3dvHw"><img src="https://i.ibb.co/MzvSfLb/Mahavir-logo.jpg" alt="Mahavir-logo" border="0"></a>
+        </div>
+        <div class="logo-text">
+          <div class="main-title">Test Series 2025-26</div>
+          <div class="sub-title">For Std. 10 English Med.(CBSE/GSEB) & Gujarati Med.</div>
+        </div>
+    </div>
+
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Why Join?</h2>
+      </div>
+      <div class="benefits">
+        <div class="benefit-box">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Real Exam Feel</h3>
+          <p>Hall tickets, seating plans, and strict supervision like board exams.</p>
+        </div>
+        <div class="benefit-box">
+          <i class="fas fa-book-open"></i>
+          <h3>Full Syllabus Coverage</h3>
+          <p>Papers designed as per Board Pattern with full syllabus testing.</p>
+        </div>
+        <div class="benefit-box">
+          <i class="fas fa-chart-line"></i>
+          <h3>Detailed Results</h3>
+          <p>Results announced online with ranking and feedback.</p>
+        </div>
+        <div class="benefit-box">
+          <i>₹</i>
+          <h3>Affordable Fee</h3>
+          <p>Special price ₹500 (instead of ₹700) thanks to Mahavir Classes partnership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Test Schedule</h2>
+      </div>
+      <div class="timetable-container">
+        <!-- Lakshya Test Series -->
+        <div class="test-timetable">
+          <div class="test-header">
+            <div class="test-name">लक्ष्य Test Series</div>
+            <div class="test-subtitle">Std 10 (80 Marks)</div>
+          </div>
+          <table class="timetable">
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Subject</th>
+            </tr>
+            <tr>
+              <td>22-11-2025</td>
+              <td>Saturday</td>
+              <td class="empty-cell">-</td>
+            </tr>
+            <tr>
+              <td>23-11-2025</td>
+              <td>Sunday</td>
+              <td class="subject-cell">Science</td>
+            </tr>
+            <tr>
+              <td>25-11-2025</td>
+              <td>Tuesday</td>
+              <td class="subject-cell">English</td>
+            </tr>
+            <tr>
+              <td>27-11-2025</td>
+              <td>Thursday</td>
+              <td class="subject-cell">Maths</td>
+            </tr>
+            <tr>
+              <td>29-11-2025</td>
+              <td>Saturday</td>
+              <td class="subject-cell">S.S.T</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Vishwas Test Series -->
+        <div class="test-timetable">
+          <div class="test-header">
+            <div class="test-name">विश्वास Test Series</div>
+            <div class="test-subtitle">Std 10 (80 Marks)</div>
+          </div>
+          <table class="timetable">
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Subject</th>
+            </tr>
+            <tr>
+              <td>24-12-2025</td>
+              <td>Wednesday</td>
+              <td class="empty-cell">-</td>
+            </tr>
+            <tr>
+              <td>25-12-2025</td>
+              <td>Thursday</td>
+              <td class="subject-cell">Science</td>
+            </tr>
+            <tr>
+              <td>27-12-2025</td>
+              <td>Saturday</td>
+              <td class="subject-cell">Maths</td>
+            </tr>
+            <tr>
+              <td>28-12-2025</td>
+              <td>Sunday</td>
+              <td class="subject-cell">English</td>
+            </tr>
+            <tr>
+              <td>30-12-2025</td>
+              <td>Tuesday</td>
+              <td class="subject-cell">S.S.T</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Manzil Test Series (Coming Soon) -->
+        <div class="test-timetable blur-card">
+          <div class="coming-soon">Coming Soon</div>
+          <div class="test-header">
+            <div class="test-name">मंज़िल Test Series</div>
+            <div class="test-subtitle">Std 10 (80 Marks)</div>
+          </div>
+          <table class="timetable">
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Subject</th>
+            </tr>
+            <tr>
+              <td>To be announced</td>
+              <td>-</td>
+              <td class="empty-cell">-</td>
+            </tr>
+            <tr>
+              <td>After 25th Jan 2026</td>
+              <td>-</td>
+              <td class="subject-cell">Science</td>
+            </tr>
+            <tr>
+              <td>After 25th Jan 2026</td>
+              <td>-</td>
+              <td class="subject-cell">Maths</td>
+            </tr>
+            <tr>
+              <td>After 25th Jan 2026</td>
+              <td>-</td>
+              <td class="subject-cell">English</td>
+            </tr>
+            <tr>
+              <td>After 25th Jan 2026</td>
+              <td>-</td>
+              <td class="subject-cell">S.S.T</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Pricing</h2>
+      </div>
+      <div class="pricing-box">
+        <p>Complete Test Series Package</p>
+        <div class="price">
+          <del>₹700</del> 
+          <span>₹500</span>
+        </div>
+        <ul class="features-list">
+          <li><i class="fas fa-check-circle"></i> All 3 Tests</li>
+          <li><i class="fas fa-check-circle"></i> Hall Ticket & Seating</li>
+          <li><i class="fas fa-check-circle"></i> Supplementary Sheets</li>
+          <li><i class="fas fa-check-circle"></i> Detailed Online Results</li>
+        </ul>
+        <a href="#contact" class="btn">Register Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syllabus Section -->
+  <section id="syllabus">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Syllabus</h2>
+      </div>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">Each test will be based on the <strong>Full Syllabus</strong> and set in the exact <strong>Board Exam Pattern</strong> for both Gujarati and English medium students. The tests cover all subjects including Mathematics, Science, Social Studies, and English as per the GSEB/CBSE curriculum.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Photo Gallery</h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <a href="https://ibb.co/5WLR0CyD"><img src="https://i.ibb.co/RpcDFtmn/photo-2025-09-29-19-06-34.jpg" alt="photo-2025-09-29-19-06-34" border="0"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="https://ibb.co/QvdsYfsT"><img src="https://i.ibb.co/tpXyY4yv/photo-2025-09-29-18-52-36.jpg" alt="photo-2025-09-29-18-52-36" border="0"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="https://ibb.co/B59hfZXD"><img src="https://i.ibb.co/ycrzNywT/photo-2025-09-29-19-34-43.jpg" alt="photo-2025-09-29-19-34-43" border="0"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Results</h2>
+      </div>
+      <div class="results">
+        <div class="result-card">
+          <img src="https://i.ibb.co/LhYLdT0f/Result-PHOTO.jpg" alt="Result-PHOTO" border="0">
+          <div class="result-content">
+            <h3>Test Series Results Portal</h3>
+            <p>One-click result portal: enter your seat number and view your full academic performance.</p>
+          </div>
+        </div>
+        <div class="result-card">
+          <a href="https://ibb.co/G4bpyRJr"><img src="https://i.ibb.co/pB9wcdPk/result-image.jpg" alt="result-image" border="0"></a>
+          <div class="result-content">
+            <h3>Test Results</h3>
+            <p>Comparative ranking and improvement tracking</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>What Students Say</h2>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>“The test series gave me the exact board exam feeling. I felt confident during my real exam! The detailed feedback helped me identify my weak areas.”</p>
+          <div class="author">– Rohan Patel, 95% in Board Exam</div>
+        </div>
+        <div class="testimonial">
+          <p>“Affordable and very professional. Highly recommended for every Std. 10 student in Bharuch. The online results were quick and detailed.”</p>
+          <div class="author">– Priya Sharma, Parent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Who can join this test series?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>All Std. 10 students (English & Gujarati Medium, GSEB/CBSE) can join the test series.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is included in the fee?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The fee includes all 3 tests, hall ticket, exam seating, supplementary sheets, and detailed online results with ranking.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I register?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>You can register by filling the form below or contact us directly via phone/email. Payment can be made online or at our center.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Where will the tests be conducted?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Tests will be conducted at designated centers in Bharuch with proper exam-like arrangements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-title">
+        <h2>Register / Contact Us</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>Mahavir Classes, 233-236 , Harihar Shopping ,Tulshidham, Bharuch</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+91-9998572797</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>mahavirclasses23@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>For Registration Time</h4>
+              <p>Monday - Saturday: 4:00 PM - 7:00 PM</p>
+            </div>
+          </div>
+        </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5704.791493516752!2d73.020108!3d21.71567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0211f7ccd2065%3A0x4b4087dcbd9bf920!2sMahavir%20Classes%20-%20Best%20Coaching%20Class%20for%20JEE%20NEET%20%7C%20CBSE%20%7C%20Coaching%20for%20Science%20and%20Commerce%20in%20Bharuch!5e1!3m2!1sen!2sin!4v1759205023654!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>StudentsKiAwaaz Bharuch</h3>
+        <p>Empowering students with quality education and exam preparation resources since 2015.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Test Series</a></li>
+          <li><a href="#benefits">Why Join Us</a></li>
+          <li><a href="#schedule">Test Schedule</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Register Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Important Info</h3>
+        <ul>
+          <li><a href="#syllabus">Syllabus Coverage</a></li>
+          <li><a href="#results">Previous Results</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#gallery">Photo Gallery</a></li>
+          <li><a href="#testimonials">Student Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Mahavir Classes, Near GIDC, Bharuch</li>
+          <li><i class="fas fa-phone"></i> +91-9876543210</li>
+          <li><i class="fas fa-envelope"></i> info@studentkiawaazbharuch.com</li>
+          <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 StudentsKiAwaaz Bharuch x Mahavir Classes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu after clicking a link
+          document.querySelector('nav').classList.remove('active');
+          document.querySelector('.mobile-menu i').classList.add('fa-bars');
+          document.querySelector('.mobile-menu i').classList.remove('fa-times');
+        }
+      });
+    });
+
+    // Form Submission
+    const contactForm = document.querySelector('form');
+    
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simple validation
+      const inputs = this.querySelectorAll('input, select, textarea');
+      let isValid = true;
+      
+      inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          isValid = false;
+          input.style.border = '2px solid var(--accent)';
+        } else {
+          input.style.border = 'none';
+        }
+      });
+      
+      if (isValid) {
+        alert('Thank you for your registration! We will contact you soon.');
+        this.reset();
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    });
+
+    // Add animation to timetable cards on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.test-timetable').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
